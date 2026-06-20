@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    background: #0d1a2d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.card {
+    background: #142740;
+    max-width: 350px;
+    width: 100%;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.card-image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    display: block;
+}
+
+
+.card h2 {
+    color: #fff;
+    font-size: clamp(1.15rem, 3.5vw, 1.35rem);
+    font-weight: 500;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.card h2:hover {
+    color: #00fff7;
+}
+
+.description {
+    color: #627a99;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    font-weight: 300;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    font-weight: 400;
+}
+
+.eth {
+    color: #00fff7;
+    font-weight: 600;
+}
+
+.time {
+    color: #627a99;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background: #2f4156;
+    margin: 16px 0;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-footer img {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.card-footer p {
+    color: #627a99;
+    font-size: clamp(0.85rem, 2.5vw, 0.95rem);
+    font-weight: 300;
+}
+
+.card-footer span {
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.card-footer span:hover {
+    color: #00fff7;
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 16px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .card-footer {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .card h2 {
+        font-size: 1.05rem;
+    }
+}
